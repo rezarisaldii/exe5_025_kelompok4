@@ -37,6 +37,17 @@ namespace exe5_025_kelompok4
             risaldi.next = newnode;
             risaldi = newnode;
         }
+        public void delete()
+        {
+            if(reza == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return;
+            }
+            reza = reza.next;
+            if (reza == null)
+                risaldi = null;
+        }
     }
     internal class Program
     {
