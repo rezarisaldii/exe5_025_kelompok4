@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace exe5_025_kelompok4
 {
+    //create node for list
     class Node
     {
         public string val;
         public Node next;
     }
+    //declare front and rear
     class queue
     {
         Node reza, risaldi;
@@ -21,7 +23,7 @@ namespace exe5_025_kelompok4
             risaldi = null;
         }
 
-        public void insert()
+        public void enter()
         {
             string data;
             Node newnode = new Node();
