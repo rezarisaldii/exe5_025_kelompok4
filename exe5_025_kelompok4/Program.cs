@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace exe5_025_kelompok4
 {
     class Node
     {
-        public string name;
+        public string val;
         public Node next;
     }
     class queue
@@ -22,11 +23,11 @@ namespace exe5_025_kelompok4
 
         public void insert()
         {
-            string nm;
+            string data;
             Node newnode = new Node();
             Console.WriteLine("Masukan Element: ");
-            nm = Console.ReadLine();
-            newnode.name = nm;
+            data = Console.ReadLine();
+            newnode.val = data;
             newnode.next = null;
             if(reza == null)
             {
@@ -56,9 +57,9 @@ namespace exe5_025_kelompok4
                 return;
             }
             Node display;
-            int nd = 1;
+            int Count = 1;
             for (display = reza; display != null; display = display.next)
-                Console.WriteLine(display.name);
+                Console.WriteLine("Data Number ["+ (Count++)+ "] is :" + display.val);
         }
     }
     class Program
