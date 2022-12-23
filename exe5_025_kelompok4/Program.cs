@@ -13,7 +13,12 @@ namespace exe5_025_kelompok4
     }
     class queue
     {
-
+        Node reza, risaldi;
+        public queue()
+        {
+            reza = null;
+            risaldi = null;
+        }
     }
     internal class Program
     {
