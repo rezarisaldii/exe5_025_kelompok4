@@ -19,6 +19,24 @@ namespace exe5_025_kelompok4
             reza = null;
             risaldi = null;
         }
+
+        public void insert()
+        {
+            string nm;
+            Node newnode = new Node();
+            Console.WriteLine("Masukan Element: ");
+            nm = Console.ReadLine();
+            newnode.name = nm;
+            newnode.next = null;
+            if(reza == null)
+            {
+                reza = newnode;
+                risaldi = newnode;
+                return;
+            }
+            risaldi.next = newnode;
+            risaldi = newnode;
+        }
     }
     internal class Program
     {
