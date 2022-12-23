@@ -48,6 +48,18 @@ namespace exe5_025_kelompok4
             if (reza == null)
                 risaldi = null;
         }
+        public void display()
+        {
+            if(reza == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return;
+            }
+            Node display;
+            int nd = 1;
+            for (display = reza; display != null; display = display.next)
+                Console.WriteLine(display.name);
+        }
     }
     internal class Program
     {
