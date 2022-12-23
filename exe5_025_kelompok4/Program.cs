@@ -61,10 +61,47 @@ namespace exe5_025_kelompok4
                 Console.WriteLine(display.name);
         }
     }
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            queue q = new queue();
+            char ch;
+            while(true)
+            {
+                try
+                {
+                    Console.WriteLine("Menu");
+                    Console.WriteLine("1. Implement Insert Operation");
+                    Console.WriteLine("2. Implement Delete Operation");
+                    Console.WriteLine("3. Display Values");
+                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("\nEnter your choice: ");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine();
+                    switch(ch)
+                    {
+                        case '1':
+                            q.insert();
+                            break;
+                        case '2':
+                            q.delete();
+                            break;
+                        case '3':
+                            q.display();
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            Console.WriteLine("Invalid Option");
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the value entered. ");
+                }
+            }
         }
     }
 }
